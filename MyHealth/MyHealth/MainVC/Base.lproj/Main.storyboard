@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLi-Ki-NaL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="f7V-l6-D4v">
+            <objects>
+                <viewController id="gLi-Ki-NaL" customClass="MainViewController" customModule="HealthCare" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6S-bT-pjV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Is5-SF-zfi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="3vL-yK-zHq">
+                                        <rect key="frame" x="24" y="0.0" width="327" height="423"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-health-care-icon" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-bu-r8f">
+                                                <rect key="frame" x="73.5" y="141.5" width="180" height="180.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="iqL-bu-r8f" secondAttribute="height" multiplier="1:1" id="YtG-qu-sck"/>
+                                                    <constraint firstAttribute="width" constant="180" id="vu5-Fz-eFE"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="iqL-bu-r8f" firstAttribute="centerY" secondItem="3vL-yK-zHq" secondAttribute="centerY" constant="20" id="S2U-Sw-Iar"/>
+                                            <constraint firstItem="iqL-bu-r8f" firstAttribute="centerX" secondItem="3vL-yK-zHq" secondAttribute="centerX" id="eCD-qQ-GZQ"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="y1q-Xr-Aw6"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vei-im-MHE">
+                                        <rect key="frame" x="24" y="439" width="327" height="132"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-3Z-3sA" customClass="Button" customModule="HealthCare" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
+                                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="YHS-hN-Ilu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="Tạo mục tiêu">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-zl-XQf" customClass="Button" customModule="HealthCare" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="70" width="327" height="62"/>
+                                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="62" id="tIp-06-AUE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <state key="normal" title="Đăng nhập">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="M6o-fX-iAI">
+                                        <rect key="frame" x="24" y="587" width="327" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8f-Mz-gKm">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="80"/>
+                                                <state key="normal" title="Thông tin chi tiết">
+                                                    <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-v9-86s">
+                                                <rect key="frame" x="163.5" y="0.0" width="163.5" height="80"/>
+                                                <state key="normal" title="Hỗ trợ">
+                                                    <color key="titleColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="n4L-94-66x"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vei-im-MHE" firstAttribute="leading" secondItem="Is5-SF-zfi" secondAttribute="leading" constant="24" id="CYm-JZ-QGm"/>
+                                    <constraint firstItem="3vL-yK-zHq" firstAttribute="leading" secondItem="Is5-SF-zfi" secondAttribute="leading" constant="24" id="Fia-ZM-b1x"/>
+                                    <constraint firstAttribute="trailing" secondItem="M6o-fX-iAI" secondAttribute="trailing" constant="24" id="Fu3-zX-70m"/>
+                                    <constraint firstItem="M6o-fX-iAI" firstAttribute="leading" secondItem="Is5-SF-zfi" secondAttribute="leading" constant="24" id="S5p-ut-5DG"/>
+                                    <constraint firstAttribute="trailing" secondItem="vei-im-MHE" secondAttribute="trailing" constant="24" id="TmS-6j-zg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="3vL-yK-zHq" secondAttribute="trailing" constant="24" id="khh-pq-5um"/>
+                                    <constraint firstAttribute="bottom" secondItem="M6o-fX-iAI" secondAttribute="bottom" id="mm2-4c-CeJ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="trailing" secondItem="05h-vA-wxC" secondAttribute="trailing" id="1X1-qq-2kL"/>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="bottom" secondItem="05h-vA-wxC" secondAttribute="bottom" id="2kQ-wL-SrV"/>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="leading" secondItem="05h-vA-wxC" secondAttribute="leading" id="67v-ac-e8b"/>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="top" secondItem="w6S-bT-pjV" secondAttribute="top" id="HOf-L2-Rkb"/>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="top" secondItem="w6S-bT-pjV" secondAttribute="top" id="LiB-Yw-yRL"/>
+                            <constraint firstItem="Is5-SF-zfi" firstAttribute="leading" secondItem="w6S-bT-pjV" secondAttribute="leading" id="TWJ-54-kkV"/>
+                            <constraint firstItem="05h-vA-wxC" firstAttribute="trailing" secondItem="Is5-SF-zfi" secondAttribute="trailing" id="bT9-UJ-emY"/>
+                            <constraint firstItem="05h-vA-wxC" firstAttribute="bottom" secondItem="Is5-SF-zfi" secondAttribute="bottom" id="vtM-s2-kmw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="05h-vA-wxC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vtO-97-BTd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43o-1J-fB5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="491.304347826087" y="115.7608695652174"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="red-health-care-icon" width="800" height="800"/>
+    </resources>
+</document>

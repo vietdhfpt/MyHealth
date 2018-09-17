@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		22164773214F7BAC00A29AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164772214F7BAC00A29AC9 /* AppDelegate.swift */; };
-		22164775214F7BAC00A29AC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164774214F7BAC00A29AC9 /* ViewController.swift */; };
 		22164778214F7BAC00A29AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22164776214F7BAC00A29AC9 /* Main.storyboard */; };
 		2216477B214F7BAC00A29AC9 /* MyHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22164779214F7BAC00A29AC9 /* MyHealth.xcdatamodeld */; };
 		2216477D214F7BAD00A29AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2216477C214F7BAD00A29AC9 /* Assets.xcassets */; };
 		22164780214F7BAD00A29AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */; };
+		22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164788214F7D9100A29AC9 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2216476F214F7BAC00A29AC9 /* MyHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22164772214F7BAC00A29AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		22164774214F7BAC00A29AC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		22164777214F7BAC00A29AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2216477A214F7BAC00A29AC9 /* MyHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyHealth.xcdatamodel; sourceTree = "<group>"; };
 		2216477C214F7BAD00A29AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2216477F214F7BAD00A29AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22164781214F7BAD00A29AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22164788214F7D9100A29AC9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		22164771214F7BAC00A29AC9 /* MyHealth */ = {
 			isa = PBXGroup;
 			children = (
-				22164772214F7BAC00A29AC9 /* AppDelegate.swift */,
-				22164774214F7BAC00A29AC9 /* ViewController.swift */,
+				2216478A214F7DB400A29AC9 /* AppSettings */,
+				22164787214F7D1900A29AC9 /* MainVC */,
+				2216478B214F7F5A00A29AC9 /* Supporting Files */,
+			);
+			path = MyHealth;
+			sourceTree = "<group>";
+		};
+		22164787214F7D1900A29AC9 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
 				22164776214F7BAC00A29AC9 /* Main.storyboard */,
+				22164788214F7D9100A29AC9 /* MainViewController.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		2216478A214F7DB400A29AC9 /* AppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				22164772214F7BAC00A29AC9 /* AppDelegate.swift */,
+			);
+			path = AppSettings;
+			sourceTree = "<group>";
+		};
+		2216478B214F7F5A00A29AC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				2216477C214F7BAD00A29AC9 /* Assets.xcassets */,
 				2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */,
 				22164781214F7BAD00A29AC9 /* Info.plist */,
 				22164779214F7BAC00A29AC9 /* MyHealth.xcdatamodeld */,
 			);
-			path = MyHealth;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +162,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22164775214F7BAC00A29AC9 /* ViewController.swift in Sources */,
 				2216477B214F7BAC00A29AC9 /* MyHealth.xcdatamodeld in Sources */,
 				22164773214F7BAC00A29AC9 /* AppDelegate.swift in Sources */,
+				22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K6265BR55C;
-				INFOPLIST_FILE = MyHealth/Info.plist;
+				INFOPLIST_FILE = "MyHealth/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K6265BR55C;
-				INFOPLIST_FILE = MyHealth/Info.plist;
+				INFOPLIST_FILE = "MyHealth/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
