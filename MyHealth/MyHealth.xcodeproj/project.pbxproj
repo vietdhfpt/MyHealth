@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2208D825215072AF001821C0 /* PickerViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208D824215072AF001821C0 /* PickerViewHelper.swift */; };
+		2208D82721507F36001821C0 /* ChooseTallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2208D82621507F36001821C0 /* ChooseTallViewController.swift */; };
 		22164773214F7BAC00A29AC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164772214F7BAC00A29AC9 /* AppDelegate.swift */; };
 		22164778214F7BAC00A29AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22164776214F7BAC00A29AC9 /* Main.storyboard */; };
 		2216477B214F7BAC00A29AC9 /* MyHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22164779214F7BAC00A29AC9 /* MyHealth.xcdatamodeld */; };
-		2216477D214F7BAD00A29AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2216477C214F7BAD00A29AC9 /* Assets.xcassets */; };
 		22164780214F7BAD00A29AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */; };
 		22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164788214F7D9100A29AC9 /* MainViewController.swift */; };
+		2216478D214F931100A29AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2216478C214F931100A29AC9 /* Assets.xcassets */; };
+		226773DB214FFC12004577F7 /* ChooseBirthDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */; };
+		226EFFF62151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */; };
+		226EFFF82151D63900218E51 /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */; };
+		226EFFFA2151D65B00218E51 /* ChooseGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFF92151D65B00218E51 /* ChooseGoalViewController.swift */; };
+		226EFFFC2151EDF100218E51 /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFFB2151EDF100218E51 /* UIColor+Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2208D824215072AF001821C0 /* PickerViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewHelper.swift; sourceTree = "<group>"; };
+		2208D82621507F36001821C0 /* ChooseTallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTallViewController.swift; sourceTree = "<group>"; };
 		2216476F214F7BAC00A29AC9 /* MyHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22164772214F7BAC00A29AC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22164777214F7BAC00A29AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2216477A214F7BAC00A29AC9 /* MyHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyHealth.xcdatamodel; sourceTree = "<group>"; };
-		2216477C214F7BAD00A29AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2216477F214F7BAD00A29AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22164781214F7BAD00A29AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22164788214F7D9100A29AC9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2216478C214F931100A29AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBirthDayViewController.swift; sourceTree = "<group>"; };
+		226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeightCurrentAndGoalViewController.swift; sourceTree = "<group>"; };
+		226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGenderViewController.swift; sourceTree = "<group>"; };
+		226EFFF92151D65B00218E51 /* ChooseGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGoalViewController.swift; sourceTree = "<group>"; };
+		226EFFFB2151EDF100218E51 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Utilities.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2208D82221507273001821C0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2208D8232150728C001821C0 /* PickerViewHelper */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2208D8232150728C001821C0 /* PickerViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				2208D824215072AF001821C0 /* PickerViewHelper.swift */,
+			);
+			path = PickerViewHelper;
+			sourceTree = "<group>";
+		};
 		22164766214F7BAC00A29AC9 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				2216478A214F7DB400A29AC9 /* AppSettings */,
+				2208D82221507273001821C0 /* Service */,
 				22164787214F7D1900A29AC9 /* MainVC */,
 				2216478B214F7F5A00A29AC9 /* Supporting Files */,
 			);
@@ -68,6 +99,11 @@
 			children = (
 				22164776214F7BAC00A29AC9 /* Main.storyboard */,
 				22164788214F7D9100A29AC9 /* MainViewController.swift */,
+				226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */,
+				226EFFF92151D65B00218E51 /* ChooseGoalViewController.swift */,
+				226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */,
+				2208D82621507F36001821C0 /* ChooseTallViewController.swift */,
+				226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -83,7 +119,8 @@
 		2216478B214F7F5A00A29AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2216477C214F7BAD00A29AC9 /* Assets.xcassets */,
+				226EFFFB2151EDF100218E51 /* UIColor+Utilities.swift */,
+				2216478C214F931100A29AC9 /* Assets.xcassets */,
 				2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */,
 				22164781214F7BAD00A29AC9 /* Info.plist */,
 				22164779214F7BAC00A29AC9 /* MyHealth.xcdatamodeld */,
@@ -150,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22164780214F7BAD00A29AC9 /* LaunchScreen.storyboard in Resources */,
-				2216477D214F7BAD00A29AC9 /* Assets.xcassets in Resources */,
+				2216478D214F931100A29AC9 /* Assets.xcassets in Resources */,
 				22164778214F7BAC00A29AC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				226EFFFC2151EDF100218E51 /* UIColor+Utilities.swift in Sources */,
+				226EFFF82151D63900218E51 /* ChooseGenderViewController.swift in Sources */,
+				2208D825215072AF001821C0 /* PickerViewHelper.swift in Sources */,
+				226773DB214FFC12004577F7 /* ChooseBirthDayViewController.swift in Sources */,
+				226EFFFA2151D65B00218E51 /* ChooseGoalViewController.swift in Sources */,
 				2216477B214F7BAC00A29AC9 /* MyHealth.xcdatamodeld in Sources */,
 				22164773214F7BAC00A29AC9 /* AppDelegate.swift in Sources */,
+				2208D82721507F36001821C0 /* ChooseTallViewController.swift in Sources */,
 				22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */,
+				226EFFF62151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

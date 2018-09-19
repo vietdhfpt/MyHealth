@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gLi-Ki-NaL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gSj-ST-0lT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Main View Controller-->
         <scene sceneID="f7V-l6-D4v">
             <objects>
-                <viewController id="gLi-Ki-NaL" customClass="MainViewController" customModule="HealthCare" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="gLi-Ki-NaL" customClass="MainViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w6S-bT-pjV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vei-im-MHE">
                                         <rect key="frame" x="24" y="439" width="327" height="132"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-3Z-3sA" customClass="Button" customModule="HealthCare" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vyu-3Z-3sA" customClass="Button" customModule="MyHealth" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="327" height="62"/>
                                                 <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -64,8 +64,11 @@
                                                         <integer key="value" value="13"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="Tgh-Ck-kmY" kind="show" id="nSn-dZ-qdW"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-zl-XQf" customClass="Button" customModule="HealthCare" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qv7-zl-XQf" customClass="Button" customModule="MyHealth" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70" width="327" height="62"/>
                                                 <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -131,14 +134,588 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="05h-vA-wxC"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vtO-97-BTd"/>
+                    <navigationItem key="navigationItem" id="vtO-97-BTd">
+                        <barButtonItem key="backBarButtonItem" title=" " id="9DM-gH-jTP"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43o-1J-fB5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="491.304347826087" y="115.7608695652174"/>
+            <point key="canvasLocation" x="1271" y="116"/>
+        </scene>
+        <!--Hoàn thành 1 / 9 câu hỏi-->
+        <scene sceneID="TFw-ZE-1va">
+            <objects>
+                <viewController id="Tgh-Ck-kmY" customClass="ChooseGenderViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68R-dg-Nuv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rw8-YS-WMH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính của bạn là gì?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGe-IG-F9Z">
+                                        <rect key="frame" x="15" y="25" width="345" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VM-Er-BH7">
+                                        <rect key="frame" x="15" y="69" width="345" height="101.5"/>
+                                        <string key="text">Hãy trả lời các câu hỏi theo các bước của chúng tôi.  - Dựa vào các thông tin bạn cung cấp, chúng tôi có thế đưa ra các chỉ số sức khoẻ của bạn.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8VM-Er-BH7" secondAttribute="trailing" constant="15" id="ERp-mA-Lm3"/>
+                                    <constraint firstAttribute="height" constant="220" id="FAv-Kd-pt8"/>
+                                    <constraint firstItem="8VM-Er-BH7" firstAttribute="top" secondItem="cGe-IG-F9Z" secondAttribute="bottom" constant="8" id="OI7-uD-P4r"/>
+                                    <constraint firstItem="cGe-IG-F9Z" firstAttribute="top" secondItem="rw8-YS-WMH" secondAttribute="top" constant="25" id="QWU-bd-d8S"/>
+                                    <constraint firstAttribute="trailing" secondItem="cGe-IG-F9Z" secondAttribute="trailing" constant="15" id="TKB-e4-9aI"/>
+                                    <constraint firstItem="cGe-IG-F9Z" firstAttribute="leading" secondItem="rw8-YS-WMH" secondAttribute="leading" constant="15" id="Ufk-LX-HCH"/>
+                                    <constraint firstItem="8VM-Er-BH7" firstAttribute="leading" secondItem="rw8-YS-WMH" secondAttribute="leading" constant="15" id="moS-tf-hBb"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ntj-86-c0y">
+                                <rect key="frame" x="40" y="284" width="295" height="120"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_female" translatesAutoresizingMaskIntoConstraints="NO" id="l8V-wu-L8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="120"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_male" translatesAutoresizingMaskIntoConstraints="NO" id="jKt-M7-A2g">
+                                        <rect key="frame" x="162.5" y="0.0" width="132.5" height="120"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="vQv-7u-qAb"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="q6s-jd-ZHC">
+                                <rect key="frame" x="40" y="424" width="295" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POA-ZD-be9">
+                                        <rect key="frame" x="0.0" y="0.0" width="132.5" height="40"/>
+                                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Nữ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressFemale:" destination="Tgh-Ck-kmY" eventType="touchUpInside" id="RD6-3u-ogB"/>
+                                            <segue destination="zoT-zl-I3n" kind="show" id="Gqd-FM-09j"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrN-Bm-x7R">
+                                        <rect key="frame" x="162.5" y="0.0" width="132.5" height="40"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92536091799999998" blue="0.92077314850000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Nam">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressMale:" destination="Tgh-Ck-kmY" eventType="touchUpInside" id="F3T-u3-WDU"/>
+                                            <segue destination="zoT-zl-I3n" kind="show" id="eER-No-dNQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="46q-Pt-RBO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0zC-Bg-ed0" firstAttribute="trailing" secondItem="q6s-jd-ZHC" secondAttribute="trailing" constant="40" id="1BX-l2-ODe"/>
+                            <constraint firstItem="rw8-YS-WMH" firstAttribute="leading" secondItem="0zC-Bg-ed0" secondAttribute="leading" id="25V-Na-EP6"/>
+                            <constraint firstItem="q6s-jd-ZHC" firstAttribute="top" secondItem="Ntj-86-c0y" secondAttribute="bottom" constant="20" id="RUx-fB-6BA"/>
+                            <constraint firstItem="rw8-YS-WMH" firstAttribute="trailing" secondItem="0zC-Bg-ed0" secondAttribute="trailing" id="UX0-DH-vCw"/>
+                            <constraint firstItem="q6s-jd-ZHC" firstAttribute="leading" secondItem="0zC-Bg-ed0" secondAttribute="leading" constant="40" id="dU8-FW-2Hz"/>
+                            <constraint firstItem="0zC-Bg-ed0" firstAttribute="trailing" secondItem="Ntj-86-c0y" secondAttribute="trailing" constant="40" id="ef9-qj-3wE"/>
+                            <constraint firstItem="Ntj-86-c0y" firstAttribute="leading" secondItem="0zC-Bg-ed0" secondAttribute="leading" constant="40" id="iof-au-Wzg"/>
+                            <constraint firstItem="rw8-YS-WMH" firstAttribute="top" secondItem="0zC-Bg-ed0" secondAttribute="top" id="s0H-U0-ByM"/>
+                            <constraint firstItem="Ntj-86-c0y" firstAttribute="top" secondItem="rw8-YS-WMH" secondAttribute="bottom" id="vvJ-DI-CE7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0zC-Bg-ed0"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 1 / 9 câu hỏi" leftItemsSupplementBackButton="YES" id="W4g-Je-Ki0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="15c-Bj-vdO"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonFemale" destination="POA-ZD-be9" id="o5P-RO-t66"/>
+                        <outlet property="buttonMale" destination="TrN-Bm-x7R" id="Ag4-OM-erj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXi-cC-dhp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="115.59220389805098"/>
+        </scene>
+        <!--Hoàn thành 2/9 câu hỏi-->
+        <scene sceneID="jH9-OI-wmB">
+            <objects>
+                <viewController id="zoT-zl-I3n" customClass="ChooseGoalViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5L-bo-KXe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njs-tj-Rcz">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mục tiêu của bạn là gì?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgO-h5-Gzb">
+                                        <rect key="frame" x="15" y="25" width="345" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hãy lựa chọn mục tiêu phù hợp với bản thân mình. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhM-9h-7Z6">
+                                        <rect key="frame" x="15" y="69" width="345" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="8k1-Xk-gUb"/>
+                                    <constraint firstItem="bhM-9h-7Z6" firstAttribute="leading" secondItem="njs-tj-Rcz" secondAttribute="leading" constant="15" id="C6c-SX-pt2"/>
+                                    <constraint firstItem="jgO-h5-Gzb" firstAttribute="leading" secondItem="njs-tj-Rcz" secondAttribute="leading" constant="15" id="Fnj-I5-d1A"/>
+                                    <constraint firstItem="bhM-9h-7Z6" firstAttribute="top" secondItem="jgO-h5-Gzb" secondAttribute="bottom" constant="8" id="Ln1-bB-pvq"/>
+                                    <constraint firstItem="bhM-9h-7Z6" firstAttribute="top" secondItem="jgO-h5-Gzb" secondAttribute="bottom" constant="8" id="MX4-iH-HtE"/>
+                                    <constraint firstItem="jgO-h5-Gzb" firstAttribute="top" secondItem="njs-tj-Rcz" secondAttribute="top" constant="25" id="Ykw-L1-Wab"/>
+                                    <constraint firstAttribute="trailing" secondItem="jgO-h5-Gzb" secondAttribute="trailing" constant="15" id="lHi-Jm-bvP"/>
+                                    <constraint firstAttribute="trailing" secondItem="bhM-9h-7Z6" secondAttribute="trailing" constant="15" id="zNt-Mm-g8c"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DN7-Cx-Wb9">
+                                <rect key="frame" x="25" y="234" width="250" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK6-xT-JM2">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="56.5"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Giảm cân và đốt mỡ">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressLoseWeight:" destination="zoT-zl-I3n" eventType="touchUpInside" id="Yam-bv-f0c"/>
+                                            <segue destination="TEZ-tH-LlX" kind="show" id="wH8-Dr-Ek1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yTk-1b-wDp">
+                                        <rect key="frame" x="0.0" y="71.5" width="250" height="57"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Xây dựng cơ và tăng sức mạnh">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressBuildMuscle:" destination="zoT-zl-I3n" eventType="touchUpInside" id="DtN-NF-QsY"/>
+                                            <segue destination="TEZ-tH-LlX" kind="show" id="dwf-XE-O4h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcL-ob-OId">
+                                        <rect key="frame" x="0.0" y="143.5" width="250" height="56.5"/>
+                                        <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Duy trì sức khỏe và cân nặng">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="13"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressLiveHeathy:" destination="zoT-zl-I3n" eventType="touchUpInside" id="3P3-gn-BcD"/>
+                                            <segue destination="TEZ-tH-LlX" kind="show" id="kCL-uo-NPi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="7Sh-JU-gDh"/>
+                                    <constraint firstAttribute="height" constant="200" id="s7U-dc-NRS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DN7-Cx-Wb9" firstAttribute="leading" secondItem="fqc-3C-TEb" secondAttribute="leading" constant="25" id="6I6-ER-bCg"/>
+                            <constraint firstItem="njs-tj-Rcz" firstAttribute="leading" secondItem="fqc-3C-TEb" secondAttribute="leading" id="Fe1-5p-u0U"/>
+                            <constraint firstItem="DN7-Cx-Wb9" firstAttribute="top" secondItem="njs-tj-Rcz" secondAttribute="bottom" constant="10" id="Gae-hf-OHz"/>
+                            <constraint firstItem="njs-tj-Rcz" firstAttribute="trailing" secondItem="fqc-3C-TEb" secondAttribute="trailing" id="Lw8-qH-oTC"/>
+                            <constraint firstItem="njs-tj-Rcz" firstAttribute="top" secondItem="fqc-3C-TEb" secondAttribute="top" id="hHh-16-JiP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fqc-3C-TEb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 2/9 câu hỏi" id="fVk-71-yfY">
+                        <barButtonItem key="backBarButtonItem" title=" " id="VLP-cY-UnU"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonBuildMuscle" destination="yTk-1b-wDp" id="QFQ-sL-r9Z"/>
+                        <outlet property="buttonLiveHealthy" destination="HcL-ob-OId" id="i7L-71-yZ6"/>
+                        <outlet property="buttonLoseWeight" destination="dK6-xT-JM2" id="Ide-Og-EIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBO-Hd-Zjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2833" y="116"/>
+        </scene>
+        <!--Hoàn thành 3/9 câu hỏi-->
+        <scene sceneID="s8Z-ih-lUU">
+            <objects>
+                <viewController id="TEZ-tH-LlX" customClass="ChooseBirthDayViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mv5-x2-a24">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ba-1C-fD8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày tháng năm sinh của bạn?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-B7-SRk">
+                                        <rect key="frame" x="20" y="25" width="335" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="GDW-6f-E73"/>
+                                    <constraint firstAttribute="trailing" secondItem="IuQ-B7-SRk" secondAttribute="trailing" constant="20" id="Rdc-y5-O1k"/>
+                                    <constraint firstItem="IuQ-B7-SRk" firstAttribute="top" secondItem="0ba-1C-fD8" secondAttribute="top" constant="25" id="hGJ-3Y-4Iw"/>
+                                    <constraint firstItem="IuQ-B7-SRk" firstAttribute="leading" secondItem="0ba-1C-fD8" secondAttribute="leading" constant="20" id="mBa-qu-2ZS"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNj-7c-BVW">
+                                <rect key="frame" x="50" y="597" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="a0L-7r-Foh"/>
+                                </constraints>
+                                <state key="normal" title="Tiếp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressNext:" destination="TEZ-tH-LlX" eventType="touchUpInside" id="bW0-kf-3cb"/>
+                                    <segue destination="VK0-Uv-4xK" kind="show" id="C1W-2x-aLe"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eq1-qW-kTA">
+                                <rect key="frame" x="0.0" y="254" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="awD-Cz-tI7"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0ba-1C-fD8" firstAttribute="trailing" secondItem="ZcY-Ml-anE" secondAttribute="trailing" id="0cq-h7-uNW"/>
+                            <constraint firstItem="Eq1-qW-kTA" firstAttribute="trailing" secondItem="ZcY-Ml-anE" secondAttribute="trailing" id="6Kv-cg-Xc6"/>
+                            <constraint firstItem="0ba-1C-fD8" firstAttribute="leading" secondItem="ZcY-Ml-anE" secondAttribute="leading" id="D9J-hG-grD"/>
+                            <constraint firstItem="0ba-1C-fD8" firstAttribute="top" secondItem="ZcY-Ml-anE" secondAttribute="top" id="O2d-pL-vML"/>
+                            <constraint firstItem="qNj-7c-BVW" firstAttribute="leading" secondItem="ZcY-Ml-anE" secondAttribute="leading" constant="50" id="SiU-Ys-8cE"/>
+                            <constraint firstItem="Eq1-qW-kTA" firstAttribute="leading" secondItem="ZcY-Ml-anE" secondAttribute="leading" id="Ufi-7a-VSr"/>
+                            <constraint firstItem="ZcY-Ml-anE" firstAttribute="bottom" secondItem="qNj-7c-BVW" secondAttribute="bottom" constant="30" id="XfO-N3-8mF"/>
+                            <constraint firstItem="ZcY-Ml-anE" firstAttribute="trailing" secondItem="qNj-7c-BVW" secondAttribute="trailing" constant="50" id="lUe-Kc-CMl"/>
+                            <constraint firstItem="Eq1-qW-kTA" firstAttribute="top" secondItem="0ba-1C-fD8" secondAttribute="bottom" constant="30" id="uA8-ts-9fj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZcY-Ml-anE"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 3/9 câu hỏi" id="uak-ns-Wnl">
+                        <barButtonItem key="backBarButtonItem" title=" " id="KSa-YY-wcd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonNext" destination="qNj-7c-BVW" id="AXM-7m-ywz"/>
+                        <outlet property="pickerView" destination="Eq1-qW-kTA" id="OQf-Zg-RsN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qI-9e-vVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3614" y="116"/>
+        </scene>
+        <!--Hoàn thành 4/7 câu hỏi-->
+        <scene sceneID="4I7-mG-rGV">
+            <objects>
+                <viewController id="VK0-Uv-4xK" customClass="ChooseTallViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qjG-R6-xPh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCB-yd-sdh">
+                                <rect key="frame" x="50" y="597" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="efk-OJ-Uau"/>
+                                </constraints>
+                                <state key="normal" title="Tiếp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressNext:" destination="VK0-Uv-4xK" eventType="touchUpInside" id="kq5-Kq-MyV"/>
+                                    <segue destination="aLE-Rh-jE5" kind="show" id="nNa-K2-ZC0"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-8W-vYm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiều cao của bạn là bao nhiêu?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9MJ-cQ-Nd0">
+                                        <rect key="frame" x="20" y="25" width="335" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="5g8-Xg-dCd"/>
+                                    <constraint firstItem="9MJ-cQ-Nd0" firstAttribute="leading" secondItem="NIj-8W-vYm" secondAttribute="leading" constant="20" id="Afh-ND-tjA"/>
+                                    <constraint firstAttribute="trailing" secondItem="9MJ-cQ-Nd0" secondAttribute="trailing" constant="20" id="ZA3-J8-nVq"/>
+                                    <constraint firstItem="9MJ-cQ-Nd0" firstAttribute="top" secondItem="NIj-8W-vYm" secondAttribute="top" constant="25" id="fje-xg-vqF"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6iD-av-kIF">
+                                <rect key="frame" x="80" y="254" width="215" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="Lm9-P1-lTa"/>
+                                    <constraint firstAttribute="height" constant="220" id="ue5-pv-BRV"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6iD-av-kIF" firstAttribute="trailing" secondItem="OB1-EY-oFD" secondAttribute="trailing" constant="-80" id="4oj-2k-AiR"/>
+                            <constraint firstItem="NIj-8W-vYm" firstAttribute="top" secondItem="OB1-EY-oFD" secondAttribute="top" id="NBu-o5-WfQ"/>
+                            <constraint firstItem="NIj-8W-vYm" firstAttribute="leading" secondItem="OB1-EY-oFD" secondAttribute="leading" id="Tci-kg-7oF"/>
+                            <constraint firstItem="jCB-yd-sdh" firstAttribute="leading" secondItem="OB1-EY-oFD" secondAttribute="leading" constant="50" id="cLS-ZM-ZIn"/>
+                            <constraint firstItem="6iD-av-kIF" firstAttribute="leading" secondItem="OB1-EY-oFD" secondAttribute="leading" constant="80" id="hCC-Jd-ous"/>
+                            <constraint firstItem="NIj-8W-vYm" firstAttribute="trailing" secondItem="OB1-EY-oFD" secondAttribute="trailing" id="i3Y-Iq-JDj"/>
+                            <constraint firstItem="OB1-EY-oFD" firstAttribute="trailing" secondItem="jCB-yd-sdh" secondAttribute="trailing" constant="50" id="ppc-zi-GHL"/>
+                            <constraint firstItem="6iD-av-kIF" firstAttribute="top" secondItem="NIj-8W-vYm" secondAttribute="bottom" constant="30" id="vFq-sU-8j1"/>
+                            <constraint firstItem="OB1-EY-oFD" firstAttribute="bottom" secondItem="jCB-yd-sdh" secondAttribute="bottom" constant="30" id="yzg-MM-G96"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OB1-EY-oFD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 4/7 câu hỏi" id="Oky-sL-loJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Wk5-nR-LZe"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonNext" destination="jCB-yd-sdh" id="aOH-g4-02D"/>
+                        <outlet property="pickerView" destination="6iD-av-kIF" id="vna-GX-5FI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9u-Ia-gEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4394" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2c1-bg-0bW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gSj-ST-0lT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AeZ-ct-cri">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gLi-Ki-NaL" kind="relationship" relationship="rootViewController" id="LCn-Xm-gpT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oV3-Od-WvI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="490.39999999999998" y="115.59220389805098"/>
+        </scene>
+        <!--Hoàn thành 5/7 câu hỏi-->
+        <scene sceneID="GVy-BI-zrN">
+            <objects>
+                <viewController id="aLE-Rh-jE5" customClass="ChooseWeightCurrentViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qrz-gA-vLB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMb-lL-DyJ">
+                                <rect key="frame" x="50" y="597" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="S72-AW-joO"/>
+                                </constraints>
+                                <state key="normal" title="Tiếp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressNext:" destination="aLE-Rh-jE5" eventType="touchUpInside" id="0xx-aQ-Brc"/>
+                                    <segue destination="ONr-E5-Swa" kind="show" id="ilh-IH-ugd"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="54R-gw-FG7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cân nặng hiện tại của bạn là bao nhiêu?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tll-KD-e97">
+                                        <rect key="frame" x="20" y="25" width="335" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tll-KD-e97" secondAttribute="trailing" constant="20" id="4fc-5o-2QG"/>
+                                    <constraint firstItem="tll-KD-e97" firstAttribute="leading" secondItem="54R-gw-FG7" secondAttribute="leading" constant="20" id="B3z-fN-UE7"/>
+                                    <constraint firstAttribute="height" constant="160" id="QAB-MO-G4i"/>
+                                    <constraint firstItem="tll-KD-e97" firstAttribute="top" secondItem="54R-gw-FG7" secondAttribute="top" constant="25" id="iTO-ub-A2O"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av1-h9-jVS">
+                                <rect key="frame" x="0.0" y="254" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="9fW-M1-Qyr"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="R4Z-nZ-Q49"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="av1-h9-jVS" firstAttribute="top" secondItem="54R-gw-FG7" secondAttribute="bottom" constant="30" id="MLO-8p-GVh"/>
+                            <constraint firstItem="wMb-lL-DyJ" firstAttribute="leading" secondItem="DsJ-2u-Qff" secondAttribute="leading" constant="50" id="MLU-ca-FcW"/>
+                            <constraint firstItem="54R-gw-FG7" firstAttribute="top" secondItem="DsJ-2u-Qff" secondAttribute="top" id="aSe-yg-qbm"/>
+                            <constraint firstItem="DsJ-2u-Qff" firstAttribute="trailing" secondItem="wMb-lL-DyJ" secondAttribute="trailing" constant="50" id="gE6-5d-slq"/>
+                            <constraint firstItem="54R-gw-FG7" firstAttribute="leading" secondItem="DsJ-2u-Qff" secondAttribute="leading" id="nFX-v6-9Ac"/>
+                            <constraint firstItem="av1-h9-jVS" firstAttribute="leading" secondItem="DsJ-2u-Qff" secondAttribute="leading" id="odC-1N-aJO"/>
+                            <constraint firstItem="av1-h9-jVS" firstAttribute="trailing" secondItem="DsJ-2u-Qff" secondAttribute="trailing" id="qtj-tw-OM4"/>
+                            <constraint firstItem="54R-gw-FG7" firstAttribute="trailing" secondItem="DsJ-2u-Qff" secondAttribute="trailing" id="tkn-LO-2LG"/>
+                            <constraint firstItem="DsJ-2u-Qff" firstAttribute="bottom" secondItem="wMb-lL-DyJ" secondAttribute="bottom" constant="30" id="wKN-Gj-xaZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DsJ-2u-Qff"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 5/7 câu hỏi" id="ZF8-cK-Ymj">
+                        <barButtonItem key="backBarButtonItem" title=" " id="fd4-2u-Zgn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonNext" destination="wMb-lL-DyJ" id="0Ih-am-z35"/>
+                        <outlet property="pickerView" destination="av1-h9-jVS" id="vUu-1x-3jM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5iJ-hC-pEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5156" y="116"/>
+        </scene>
+        <!--Hoàn thành 6/7 câu hỏi-->
+        <scene sceneID="RhG-HT-Ohs">
+            <objects>
+                <viewController id="ONr-E5-Swa" customClass="ChooseWeightGoalViewController" customModule="MyHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ecs-9k-iB9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1G-Ov-XgR">
+                                <rect key="frame" x="50" y="597" width="275" height="40"/>
+                                <color key="backgroundColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WAt-B9-md6"/>
+                                </constraints>
+                                <state key="normal" title="Tiếp">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressNext:" destination="ONr-E5-Swa" eventType="touchUpInside" id="1yE-pQ-3vV"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDE-8W-6xi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="160"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mục tiêu cân nặng của bạn là bao nhiêu?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fp-PV-JPH">
+                                        <rect key="frame" x="20" y="25" width="335" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4Fp-PV-JPH" secondAttribute="trailing" constant="20" id="CaS-he-G3r"/>
+                                    <constraint firstItem="4Fp-PV-JPH" firstAttribute="leading" secondItem="bDE-8W-6xi" secondAttribute="leading" constant="20" id="KTn-ru-oBt"/>
+                                    <constraint firstItem="4Fp-PV-JPH" firstAttribute="top" secondItem="bDE-8W-6xi" secondAttribute="top" constant="25" id="ULo-t1-nJ1"/>
+                                    <constraint firstAttribute="height" constant="160" id="lmC-d5-sdx"/>
+                                </constraints>
+                            </view>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9S-VT-N1J">
+                                <rect key="frame" x="0.0" y="254" width="375" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="220" id="Gdy-tp-9dc"/>
+                                    <constraint firstAttribute="height" constant="220" id="Yef-zF-L3Q"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tnV-1A-Nh7" firstAttribute="bottom" secondItem="S1G-Ov-XgR" secondAttribute="bottom" constant="30" id="8Ek-Ap-cRH"/>
+                            <constraint firstItem="bDE-8W-6xi" firstAttribute="trailing" secondItem="tnV-1A-Nh7" secondAttribute="trailing" id="EhZ-yF-Xjx"/>
+                            <constraint firstItem="O9S-VT-N1J" firstAttribute="trailing" secondItem="tnV-1A-Nh7" secondAttribute="trailing" id="Sqh-st-lED"/>
+                            <constraint firstItem="tnV-1A-Nh7" firstAttribute="trailing" secondItem="S1G-Ov-XgR" secondAttribute="trailing" constant="50" id="Ufx-j8-8Od"/>
+                            <constraint firstItem="O9S-VT-N1J" firstAttribute="top" secondItem="bDE-8W-6xi" secondAttribute="bottom" constant="30" id="bhL-dF-j1g"/>
+                            <constraint firstItem="O9S-VT-N1J" firstAttribute="leading" secondItem="tnV-1A-Nh7" secondAttribute="leading" id="dcj-eW-xW0"/>
+                            <constraint firstItem="bDE-8W-6xi" firstAttribute="top" secondItem="tnV-1A-Nh7" secondAttribute="top" id="kfs-75-nnQ"/>
+                            <constraint firstItem="S1G-Ov-XgR" firstAttribute="leading" secondItem="tnV-1A-Nh7" secondAttribute="leading" constant="50" id="mLA-9k-6Yv"/>
+                            <constraint firstItem="bDE-8W-6xi" firstAttribute="leading" secondItem="tnV-1A-Nh7" secondAttribute="leading" id="vaT-X0-mpa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tnV-1A-Nh7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hoàn thành 6/7 câu hỏi" id="bS0-FK-apz">
+                        <barButtonItem key="backBarButtonItem" title=" " id="h4p-nH-6wN"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonNext" destination="S1G-Ov-XgR" id="OnM-wV-tk9"/>
+                        <outlet property="pickerView" destination="O9S-VT-N1J" id="3iP-xm-xdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y6s-C6-r1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5935" y="116"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon_female" width="100" height="100"/>
+        <image name="icon_male" width="100" height="100"/>
         <image name="red-health-care-icon" width="800" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kCL-uo-NPi"/>
+        <segue reference="Gqd-FM-09j"/>
+    </inferredMetricsTieBreakers>
 </document>
