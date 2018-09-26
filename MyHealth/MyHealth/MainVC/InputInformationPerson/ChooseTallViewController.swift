@@ -15,6 +15,8 @@ class ChooseTallViewController: UIViewController {
     
     let pickerViewHelper = PickerViewHelper()
     
+    var tall: Int = 0
+    
     var isSelected: Bool = false {
         didSet {
             if isSelected {
@@ -30,24 +32,28 @@ class ChooseTallViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPickerView()
+        self.defaultPickerView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.isSelected = false
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
+
     private func setupPickerView() {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
     }
     
+    private func defaultPickerView() {
+        self.pickerView.selectRow(0, inComponent: 0, animated: true)
+        self.tall = self.pickerViewHelper.talls[0]
+    }
+    
     @IBAction func pressNext(_ sender: UIButton) {
         self.isSelected = true
+        let dict = ["tall":self.tall]
+        UserDefaults.standard.set(dict, forKey: "Tall")
     }
 }
 
@@ -84,7 +90,7 @@ extension ChooseTallViewController: UIPickerViewDelegate {
         guard let typePickerView = PickerViewTallType(rawValue: component) else { return }
         switch typePickerView {
         case .tall:
-            print(self.pickerViewHelper.talls[row])
+            self.tall = self.pickerViewHelper.talls[row]
         case .type:
             break
         }

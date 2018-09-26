@@ -12,6 +12,8 @@ class ChooseGenderViewController: UIViewController {
     @IBOutlet weak var buttonFemale: UIButton!
     @IBOutlet weak var buttonMale: UIButton!
     
+    var gender: [String:String] = [:]
+    
     var isSelectedFemale: Bool = false {
         didSet {
             if isSelectedFemale {
@@ -50,9 +52,13 @@ class ChooseGenderViewController: UIViewController {
     
     @IBAction func pressFemale(_ sender: UIButton) {
         self.isSelectedFemale = true
+        self.gender = ["Female":"9.247"]
+        UserDefaults.standard.set(self.gender, forKey: "Gender")
     }
     
     @IBAction func pressMale(_ sender: UIButton) {
         self.isSelectedMale = true
+        self.gender = ["Male":"13.397"]
+        UserDefaults.standard.set(self.gender, forKey: "Gender")
     }
 }

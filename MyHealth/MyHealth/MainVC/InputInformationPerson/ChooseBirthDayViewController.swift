@@ -15,6 +15,10 @@ class ChooseBirthDayViewController: UIViewController {
     
     let pickerViewHelper = PickerViewHelper()
     
+    var day: String = ""
+    var month: String = ""
+    var year: String = ""
+    
     var isSelected: Bool = false {
         didSet {
             if isSelected {
@@ -30,16 +34,12 @@ class ChooseBirthDayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPickerView()
+        self.defaultPickerView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.isSelected = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     private func setupPickerView() {
@@ -47,8 +47,22 @@ class ChooseBirthDayViewController: UIViewController {
         self.pickerView.dataSource = self
     }
     
+    private func defaultPickerView() {
+        self.pickerView.selectRow(9, inComponent: 0, animated: true)
+        self.pickerView.selectRow(6, inComponent: 1, animated: true)
+        self.pickerView.selectRow(50, inComponent: 2, animated: true)
+        self.year = self.pickerViewHelper.years[50]
+    }
+    
+    func saveBirthDay() {
+        UserDefaults.standard.set(["day":self.day], forKey: "DayOfBirth")
+        UserDefaults.standard.set(["month":self.month], forKey: "MonthOfBirth")
+        UserDefaults.standard.set(["year":self.year], forKey: "YearOfBirth")
+    }
+    
     @IBAction func pressNext(_ sender: UIButton) {
         self.isSelected = true
+        self.saveBirthDay()
     }
 }
 
@@ -88,11 +102,11 @@ extension ChooseBirthDayViewController: UIPickerViewDelegate {
         guard let typePickerView = PickerViewType(rawValue: component) else { return }
         switch typePickerView {
         case .day:
-            print(self.pickerViewHelper.days[row])
+            self.day = String(self.pickerViewHelper.days[row])
         case .month:
-            print(self.pickerViewHelper.months[row])
+            self.month = self.pickerViewHelper.months[row]
         case .year:
-            print(self.pickerViewHelper.years[row])
+            self.year = String(self.pickerViewHelper.years[row])
         }
     }
 }

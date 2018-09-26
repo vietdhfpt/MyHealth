@@ -15,6 +15,10 @@
 		22164780214F7BAD00A29AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */; };
 		22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22164788214F7D9100A29AC9 /* MainViewController.swift */; };
 		2216478D214F931100A29AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2216478C214F931100A29AC9 /* Assets.xcassets */; };
+		2228721F2154EE1000C9457D /* ChooseActivityLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228721E2154EE1000C9457D /* ChooseActivityLevelViewController.swift */; };
+		222872222154F5EC00C9457D /* ChoosePlanGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222872212154F5EC00C9457D /* ChoosePlanGoalViewController.swift */; };
+		2257DD072154973200725EAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2257DD062154973200725EAB /* User.swift */; };
+		2257DD0921549C1500725EAB /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2257DD0821549C1500725EAB /* NotificationName.swift */; };
 		226773DB214FFC12004577F7 /* ChooseBirthDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */; };
 		226EFFF62151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */; };
 		226EFFF82151D63900218E51 /* ChooseGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */; };
@@ -33,6 +37,10 @@
 		22164781214F7BAD00A29AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22164788214F7D9100A29AC9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2216478C214F931100A29AC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2228721E2154EE1000C9457D /* ChooseActivityLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseActivityLevelViewController.swift; sourceTree = "<group>"; };
+		222872212154F5EC00C9457D /* ChoosePlanGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlanGoalViewController.swift; sourceTree = "<group>"; };
+		2257DD062154973200725EAB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2257DD0821549C1500725EAB /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBirthDayViewController.swift; sourceTree = "<group>"; };
 		226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseWeightCurrentAndGoalViewController.swift; sourceTree = "<group>"; };
 		226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGenderViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +96,7 @@
 			children = (
 				2216478A214F7DB400A29AC9 /* AppSettings */,
 				2208D82221507273001821C0 /* Service */,
+				2257DD05215496D300725EAB /* Model */,
 				22164787214F7D1900A29AC9 /* MainVC */,
 				2216478B214F7F5A00A29AC9 /* Supporting Files */,
 			);
@@ -97,13 +106,9 @@
 		22164787214F7D1900A29AC9 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				222872202154EE1500C9457D /* InputInformationPerson */,
 				22164776214F7BAC00A29AC9 /* Main.storyboard */,
 				22164788214F7D9100A29AC9 /* MainViewController.swift */,
-				226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */,
-				226EFFF92151D65B00218E51 /* ChooseGoalViewController.swift */,
-				226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */,
-				2208D82621507F36001821C0 /* ChooseTallViewController.swift */,
-				226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 		2216478B214F7F5A00A29AC9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2257DD0821549C1500725EAB /* NotificationName.swift */,
 				226EFFFB2151EDF100218E51 /* UIColor+Utilities.swift */,
 				2216478C214F931100A29AC9 /* Assets.xcassets */,
 				2216477E214F7BAD00A29AC9 /* LaunchScreen.storyboard */,
@@ -126,6 +132,28 @@
 				22164779214F7BAC00A29AC9 /* MyHealth.xcdatamodeld */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		222872202154EE1500C9457D /* InputInformationPerson */ = {
+			isa = PBXGroup;
+			children = (
+				226EFFF72151D63900218E51 /* ChooseGenderViewController.swift */,
+				226EFFF92151D65B00218E51 /* ChooseGoalViewController.swift */,
+				2228721E2154EE1000C9457D /* ChooseActivityLevelViewController.swift */,
+				226773DA214FFC12004577F7 /* ChooseBirthDayViewController.swift */,
+				2208D82621507F36001821C0 /* ChooseTallViewController.swift */,
+				226EFFF52151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift */,
+				222872212154F5EC00C9457D /* ChoosePlanGoalViewController.swift */,
+			);
+			path = InputInformationPerson;
+			sourceTree = "<group>";
+		};
+		2257DD05215496D300725EAB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2257DD062154973200725EAB /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,15 +228,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				226EFFFC2151EDF100218E51 /* UIColor+Utilities.swift in Sources */,
+				2257DD0921549C1500725EAB /* NotificationName.swift in Sources */,
 				226EFFF82151D63900218E51 /* ChooseGenderViewController.swift in Sources */,
 				2208D825215072AF001821C0 /* PickerViewHelper.swift in Sources */,
 				226773DB214FFC12004577F7 /* ChooseBirthDayViewController.swift in Sources */,
+				222872222154F5EC00C9457D /* ChoosePlanGoalViewController.swift in Sources */,
 				226EFFFA2151D65B00218E51 /* ChooseGoalViewController.swift in Sources */,
+				2228721F2154EE1000C9457D /* ChooseActivityLevelViewController.swift in Sources */,
 				2216477B214F7BAC00A29AC9 /* MyHealth.xcdatamodeld in Sources */,
 				22164773214F7BAC00A29AC9 /* AppDelegate.swift in Sources */,
 				2208D82721507F36001821C0 /* ChooseTallViewController.swift in Sources */,
 				22164789214F7D9100A29AC9 /* MainViewController.swift in Sources */,
 				226EFFF62151D01A00218E51 /* ChooseWeightCurrentAndGoalViewController.swift in Sources */,
+				2257DD072154973200725EAB /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

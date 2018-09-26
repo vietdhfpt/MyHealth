@@ -25,6 +25,9 @@ class ChooseWeightCurrentAndGoalViewController: UIViewController {
     
     let pickerViewHelper = PickerViewHelper()
     
+    var currentWeight: Int = 0
+    var currentDecimal: Int = 0
+    
     var isSelected: Bool = false {
         didSet {
             if isSelected {
@@ -40,6 +43,7 @@ class ChooseWeightCurrentAndGoalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupPickerView()
+        self.defaultPickerView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,8 +61,21 @@ class ChooseWeightCurrentAndGoalViewController: UIViewController {
         self.pickerView.dataSource = self
     }
     
+    private func defaultPickerView() {
+        self.pickerView.selectRow(0, inComponent: 0, animated: true)
+        self.pickerView.selectRow(0, inComponent: 1, animated: true)
+        self.currentWeight = self.pickerViewHelper.weights[0]
+        self.currentDecimal = self.pickerViewHelper.decimalOfWeight[0]
+    }
+    
+    func saveCurrentWeight() {
+        var weight = "\(self.currentWeight).\(self.currentDecimal)"
+        UserDefaults.standard.set(["weight":weight], forKey: "CurrentWeight")
+    }
+    
     @IBAction func pressNext(_ sender: UIButton) {
         self.isSelected = true
+        self.saveCurrentWeight()
     }
 }
 
@@ -103,11 +120,11 @@ extension ChooseWeightCurrentAndGoalViewController: UIPickerViewDelegate {
         guard let typePickerView = PickerViewWeightType(rawValue: component) else { return }
         switch typePickerView {
         case .weight:
-            print(self.pickerViewHelper.weights[row])
+            self.currentWeight = self.pickerViewHelper.weights[row]
         case .comma:
             break
         case .decimal:
-            print(self.pickerViewHelper.decimalOfWeight[row])
+            self.currentDecimal = self.pickerViewHelper.decimalOfWeight[row]
         case .type:
             break
         }
